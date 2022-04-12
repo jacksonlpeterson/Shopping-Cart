@@ -1,19 +1,22 @@
 import './Navbar.css';
 import {Link} from 'react-router-dom'
-const Navbar = () => {
+
+const Navbar = ({click}) => {
     return(
         <nav className="navbar">
-            {/* Logo */}
             <div className="navbar__logo">
                 <h2>BackLocal Shopping</h2>
             </div>
 
             <ul className="navbar__links">
                 <li>
-                    <Link to="/cart">
+                    <Link to="/cart" className="cart__link">
                         <i className="fas fa-shopping-cart"></i>
+                        <span>
                         Cart
                         <span className="cartlogo_badge">0</span>
+                        </span>
+
                     </Link>
                 </li>
                 <li>
@@ -23,7 +26,7 @@ const Navbar = () => {
                 </li>
             </ul>
 
-            <div className="hamburger__menu">
+            <div className="hamburger__menu" onCLick={click}>
                 <div></div>
                 <div></div>
                 <div></div>
