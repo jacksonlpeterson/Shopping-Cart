@@ -1,6 +1,7 @@
 import "./HomeScreen.css";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 // Components
 import Product from "../components/Product";
@@ -38,6 +39,11 @@ const HomeScreen = () => {
             />
           ))
         )}
+      </div>
+      <div>
+                  Link to Github <a href="https://github.com/jacksonlpeterson/Shopping-Cart">
+                    <i className="fa-brands fa-github-square"></i>
+                    </a>   
       </div>
     </div>
   );
